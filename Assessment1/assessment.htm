@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Form</title>
+<link rel="stylesheet" href="assessment.css">
+</head>
+<body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <div class="mydiv">
+        <div class="form-group">
+          <h1>Registration Form</h1>
+          <label for="userid">User Id</label>
+          <input type="text" class="form-control" name="userid" id="userid"  minlength="5" maxlength="12" placeholder="First Name">
+          <span id="p1" style="color: red"></span>
+          <br>
+          <label for="Pass">Password</label>
+          <input type="password"
+            class="form-control" name="Pass" id="Pass" minlength="7" maxlength="12" required placeholder="Enter Password">
+            <span id="p2" style="color: red"></span>
+            <br>
+          <label for="Pass1">Confirm Password</label>
+          <input type="password"
+            class="form-control" name="Pass1" id="Pass1" placeholder="Confirm Password">
+            <span id="p3" style="color: red"></span>
+            <br>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name"  class="form-control" placeholder="Enter Name"> 
+          <span id="p4" style="color: red"></span>
+          <br>
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" class="form-control"  placeholder="Enter DOB">  
+          <span id="p5" style="color: red"></span><br>
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address"  class="form-control" placeholder="Enter Address">        
+          <span id="p6" style="color: red"></span><br>
+          <label for="country">Country:</label>
+          <select id="country">
+            <option>Please Select a Country</option>
+            <option>Argentina</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+          </select> 
+          <span id="p7" style="color: red"></span> 
+          <br><br>
+          <label for="zip">ZIP Code</label>
+          <input type="number" name="zip" id="zip" class="form-control"  placeholder="Enter ZIP Code">
+          <span id="p8" style="color: red"></span>
+          <br>
+          <label for="email">Emil-Id</label>
+          <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email-Id">        
+          <span id="p9" style="color: red"></span>
+          <br>
+          <label for="sex"><span>Sex:</span></label>
+          <input type="radio" class="sex" id="sex1" value="Male">Male
+          <input type="radio" class="sex" id="sex2" value="Female">Female
+          <span id="p10" style="color: red"></span>
+          <br>
+          <label for="language">Language:</label>
+          <input type="checkbox"  class="c1" id="c1" value="English"> English
+          <input type="checkbox" class="c2" id="c2" value="Non-English">Non-English
+          <span id="p11" style="color: red"></span>
+          <br>
+          <label for="About">About:</label>
+          <textarea name="" id="input" class="form-control" rows="4"></textarea>
+          <br><br>
+          <input type="button" id="btn" value="Submit"  class="form-control" onclick="verify()">
+          </div>
+          </div>
+         
+          <script src="assessment.js" ></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+.mydiv{
+    width: 600px;
+    margin-left: 25%;
+    border: 1px solid black;
+    padding: 8px;
+} 
+#btn{
+  width: 200px;
+  margin-left: 35%;
+  background-color: bisque;
+}
+#About{
+  height: 200px;
+  width: 500px;
+}
+h1{
+  color: chocolate;
+}
+label{
+  color: darkgray;
+}
