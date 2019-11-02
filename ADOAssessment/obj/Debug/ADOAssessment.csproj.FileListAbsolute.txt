@@ -1,0 +1,11 @@
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\ADOAssessment.exe.config
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\ADOAssessment.exe
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\ADOAssessment.pdb
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\EntityFramework.dll
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\EntityFramework.xml
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\obj\Debug\ADOAssessment.csprojAssemblyReference.cache
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\obj\Debug\ADOAssessment.csproj.CopyComplete
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\obj\Debug\ADOAssessment.exe
+C:\Users\kkumar346\source\repos\ADOAssessment\ADOAssessment\obj\Debug\ADOAssessment.pdb

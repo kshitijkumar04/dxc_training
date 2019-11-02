@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ADODemoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customerId" />
+    </Key>
+    <Property Name="customerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cname" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="sname" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="bill" Type="Int32" />
+    <NavigationProperty Name="product" Relationship="Self.FK__customer__produc__5535A963" FromRole="customer" ToRole="product" />
+    <NavigationProperty Name="supplier" Relationship="Self.FK__customer__sname__5629CD9C" FromRole="customer" ToRole="supplier" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="productid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pname" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="customers" Relationship="Self.FK__customer__produc__5535A963" FromRole="product" ToRole="customer" />
+    <NavigationProperty Name="suppliers" Relationship="Self.FK__supplier__produc__52593CB8" FromRole="product" ToRole="supplier" />
+  </EntityType>
+  <EntityType Name="supplier">
+    <Key>
+      <PropertyRef Name="sname" />
+    </Key>
+    <Property Name="supplierId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sname" Type="String" MaxLength="33" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="location" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <NavigationProperty Name="customers" Relationship="Self.FK__customer__sname__5629CD9C" FromRole="supplier" ToRole="customer" />
+    <NavigationProperty Name="product" Relationship="Self.FK__supplier__produc__52593CB8" FromRole="supplier" ToRole="product" />
+  </EntityType>
+  <Association Name="FK__customer__produc__5535A963">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="customer" Type="Self.customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="customer">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__customer__sname__5629CD9C">
+    <End Role="supplier" Type="Self.supplier" Multiplicity="0..1" />
+    <End Role="customer" Type="Self.customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplier">
+        <PropertyRef Name="sname" />
+      </Principal>
+      <Dependent Role="customer">
+        <PropertyRef Name="sname" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__supplier__produc__52593CB8">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="supplier" Type="Self.supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="productid" />
+      </Principal>
+      <Dependent Role="supplier">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ADODemoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="suppliers" EntityType="Self.supplier" />
+    <AssociationSet Name="FK__customer__produc__5535A963" Association="Self.FK__customer__produc__5535A963">
+      <End Role="product" EntitySet="products" />
+      <End Role="customer" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__customer__sname__5629CD9C" Association="Self.FK__customer__sname__5629CD9C">
+      <End Role="supplier" EntitySet="suppliers" />
+      <End Role="customer" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__supplier__produc__52593CB8" Association="Self.FK__supplier__produc__52593CB8">
+      <End Role="product" EntitySet="products" />
+      <End Role="supplier" EntitySet="suppliers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

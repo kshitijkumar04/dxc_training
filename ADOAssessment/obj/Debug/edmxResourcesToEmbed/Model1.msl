@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ADODemoModelStoreContainer" CdmEntityContainer="ADODemoEntities">
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="ADODemoModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+          <ScalarProperty Name="cname" ColumnName="cname" />
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="sname" ColumnName="sname" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="bill" ColumnName="bill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="ADODemoModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="pname" ColumnName="pname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="ADODemoModel.supplier">
+        <MappingFragment StoreEntitySet="supplier">
+          <ScalarProperty Name="supplierId" ColumnName="supplierId" />
+          <ScalarProperty Name="sname" ColumnName="sname" />
+          <ScalarProperty Name="productid" ColumnName="productid" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
